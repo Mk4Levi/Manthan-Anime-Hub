@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 900;
+}
+
+::-webkit-scrollbar-thumb {
+  z-index: 900;
+  background: #04207d;
+  background: -webkit-linear-gradient(to bottom, #04207d, #04207d);
+  background: linear-gradient(to bottom, whitesmoke, #04207d);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  z-index: 900;
+  background: var(--color-golden);
+  background: -webkit-linear-gradient(to bottom, #04207d, var(--color-golden));
+  background: linear-gradient(to bottom, #04207d, whitesmoke);
+  border-radius: 6px;
+}
+
+:root {
+  --font-base: "Cormorant Upright", serif;
+  --font-alt: "Open Sans", sans-serif;
+
+  --color-blue: rgb(96, 22, 235);
+  --color-black: #0c0c0c;
+  --color-golden: #dcca87;
+  --color-gray: #545454;
+  --color-crimson: #f5efdb;
+  --color-grey: #aaaaaa;
+  --color-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

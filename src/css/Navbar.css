@@ -1,0 +1,372 @@
+.app__navbar {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-black);
+  top: 0;
+  position: fixed;
+  padding: 2.2rem 1rem;
+  z-index: 999;
+  box-shadow: 0 0 5px 0;
+  background: inherit;
+  backdrop-filter: blur(15px);
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar__social {
+  height: 60px;
+  width: auto;
+}
+
+.app__navbar-logo img {
+  width: 150px;
+  padding-top: 1.7rem;
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app__navbar-links li {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.app__navbar-links a:hover {
+  color: white;
+}
+
+.app__navbar-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.app__navbar-login a {
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.app__navbar-login div {
+  width: 1px;
+  height: 30px;
+  background: var(--color-grey);
+}
+
+.app__navbar-smallscreen {
+  display: none;
+}
+
+.app__navbar-smallscreen_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-black);
+  transition: 0.5s ease;
+
+  flex-direction: column;
+  z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+  font-size: 27px;
+  color: rgb(96, 22, 235);
+  cursor: pointer;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.app__navbar-smallscreen_links {
+  list-style: none;
+}
+
+.app__navbar-smallscreen_links .navbar__social {
+  margin-bottom: 5px;
+}
+
+.app__navbar-smallscreen_links li {
+  margin: 2rem;
+  cursor: pointer;
+  color: rgb(96, 22, 235);
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--font-base);
+}
+
+.app__navbar-smallscreen_links a:hover {
+  color: var(--color-white);
+}
+
+/* Close button */
+
+.navbar__close_btn {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  font-size: 10px;
+  line-height: 35px;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in;
+  width: 35px;
+}
+
+.navbar__close_btn::before,
+.navbar__close_btn::after {
+  background-color: rgb(96, 22, 235);
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  transform-origin: center left;
+  transition: all 0.2s ease-in;
+  width: 141.4214px;
+  z-index: -1;
+}
+
+.navbar__close_btn::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar__close_btn::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.navbar__close_btn:hover {
+  color: black;
+}
+
+.navbar__close_btn:hover::before,
+.navbar__close_btn:hover::after {
+  height: 50px;
+  transform: rotate(0deg);
+}
+
+@media screen and (min-width: 2000px) {
+  .app__navbar-logo img {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .app__navbar-links {
+    display: none;
+  }
+
+  .app__navbar-smallscreen {
+    display: flex;
+  }
+
+  .app__navbar-login {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__navbar {
+    padding: 1rem;
+  }
+
+  .app__navbar-logo img {
+    width: 100px;
+    padding-top: 1.1rem;
+  }
+}
+
+/* HOVER on Navbar Links */
+
+.bn {
+  font-family: var(--font-alt);
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+  /* margin: 0; */
+}
+
+li {
+  --border-radius: 25px;
+  --border-width: 7px;
+  appearance: none;
+  position: relative;
+  /* padding: 1em 2em; */
+  border: 0;
+  background: var(--color-black);
+  backdrop-filter: blur(15px);
+  background: inherit;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffff;
+  z-index: 2;
+  /* margin: 0; */
+}
+li::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* padding: var(--border-width); */
+  background-image: conic-gradient(
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080
+  );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue634 linear 500ms infinite;
+  animation-play-state: paused;
+  border-radius: 20px;
+  border-color: #000;
+}
+
+li:hover::after {
+  animation-play-state: running;
+  border-radius: 10px;
+}
+
+@keyframes rotate-hue634 {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+button,
+button::after {
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+li:active {
+  --border-width: 5px;
+}
+
+.bn {
+  /* padding: 0.9em 1.6em; */
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 32px;
+  /* margin: 0; */
+}
+
+.bn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(46, 46, 46);
+  left: 0;
+  top: 0;
+  /* border-radius: 10px; */
+
+  padding: 0;
+}
+
+.bn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #07d888,
+    #e40851,
+    #2f00ff,
+    #00ff37,
+    #ec0808,
+    #2600ff,
+    #0bd157,
+    #2f00ff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing345 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+@keyframes glowing345 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn:hover::before {
+  opacity: 1;
+}
+
+.bn:active:after {
+  background: transparent;
+}
+
+.bn:active {
+  color: #000;
+  font-weight: bold;
+}
