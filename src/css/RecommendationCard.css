@@ -1,0 +1,146 @@
+.myCard {
+  background-color: transparent;
+  width: 90%;
+  height: 15rem;
+  perspective: 1000px;
+}
+
+@media (400px <= width <= 1170px) {
+  .myCard {
+    width: 300px;
+    height: 280px;
+  }
+}
+@media (width <= 1200px) {
+  .myCard {
+    height: 15rem;
+  }
+}
+
+@media (width <= 500px) {
+  .myCard {
+    width: 100%;
+    height: 40vw;
+  }
+}
+
+/* This is css class used in npm package*/
+.vertical-timeline-element-content {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  background-color: #101220;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+#card-data {
+  font-size: 1.7em;
+}
+
+.backSide {
+  padding-bottom: 10%;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.frontSide,
+.frontSide::before {
+  background: linear-gradient(
+    43deg,
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 46%,
+    rgb(255, 204, 112) 100%
+  );
+}
+
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 500px) {
+  #card-data {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 350px) {
+  #card-data {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 280px) {
+  #card-data {
+    font-size: 0.7em;
+  }
+}
