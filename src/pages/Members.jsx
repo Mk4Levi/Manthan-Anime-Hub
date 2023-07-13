@@ -1,4 +1,5 @@
 import React from "react";
+import { Zoom, Slide } from "react-awesome-reveal";
 import "../css/Members.css";
 import { data } from "../database";
 import { MemberCard } from "../components";
@@ -14,9 +15,11 @@ const Members = () => (
     <br />
     <br />
     <div className="contactCard-container">
-      {data.membersData.map((data) => {
-        return <MemberCard key={data.id} data={data} />;
-      })}
+      <Slide direction="right">
+        {data.membersData.map((data) => {
+          return <MemberCard key={data.id} data={data} />;
+        })}
+      </Slide>
     </div>
   </div>
 );

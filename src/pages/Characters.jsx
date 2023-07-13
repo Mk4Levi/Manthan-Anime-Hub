@@ -1,16 +1,16 @@
 import React from "react";
-import { Fade } from "react-awesome-reveal";
+import { Zoom, Slide } from "react-awesome-reveal";
 import { data } from "../database";
 import "../css/Characters.css";
 
 const Characters = () => (
   <div className="sponsors-section" id="characters">
-    <Fade bottom>
+    <div>
       <br />
       <br />
       <h1 className="page-title">Best Characters in Ani-Verse</h1>
-    </Fade>
-    <Fade bottom cascade>
+    </div>
+    <Slide>
       <div className="sponsors-container">
         {data.charactersData.map((sponsor) => {
           return (
@@ -28,7 +28,7 @@ const Characters = () => (
           );
         })}
       </div>
-    </Fade>
+    </Slide>
   </div>
 );
 
