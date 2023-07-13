@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { GiHamburgerMenu } from "react-icons/gi";
+import Hamburger from "hamburger-react";
 import images from "../database/images";
 import "../css/Navbar.css";
 
@@ -67,11 +68,20 @@ const Navbar = () => {
         </a>
       </div>
       <div className="app__navbar-smallscreen">
-        <GiHamburgerMenu
+        {/* <GiHamburgerMenu
           color="#fff"
           fontSize={27}
           onClick={() => setToggleMenu(true)}
+        /> */}
+        <Hamburger
+          toggled={toggleMenu}
+          toggle={setToggleMenu}
+          color="whitesmoke"
+          fontSize={27}
+          duration={0.5}
+          rounded
         />
+
         {toggleMenu && (
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
             <button
@@ -83,7 +93,7 @@ const Navbar = () => {
               Close
             </button>
             <ul className="app__navbar-smallscreen_links">
-              <li>
+              {/* <li>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -109,7 +119,7 @@ const Navbar = () => {
                     alt="linkedin"
                   />
                 </a>
-              </li>
+              </li> */}
               <li className="bn">
                 <a href="#home" onClick={() => setToggleMenu(false)}>
                   Home

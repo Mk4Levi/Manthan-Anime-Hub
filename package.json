@@ -10,19 +10,20 @@
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
-"author": "Manthan Kumar",
+  "author": "Manthan Kumar",
   "license": "ISC",
   "keywords": [],
   "dependencies": {
     "firebase": "^9.23.0",
+    "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-scripts": "5.0.1",
-    "typewriter-effect": "^2.20.1",
-    "react-vertical-timeline-component": "^3.6.0"
-  }, 
+    "react-vertical-timeline-component": "^3.6.0",
+    "typewriter-effect": "^2.20.1"
+  },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
