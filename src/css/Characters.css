@@ -1,0 +1,124 @@
+.sponsors-section {
+  background: rgba(0, 0, 0, 0.8);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17.6px);
+  -webkit-backdrop-filter: blur(17.6px);
+}
+
+.sponsors-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 70px;
+  width: 60%;
+  margin: 5% auto 0%;
+  padding-bottom: 7%;
+}
+
+.sponsors-card {
+  position: relative;
+
+  width: 190px;
+  height: 190px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.2s ease-in-out;
+
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.sponsors-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -10px;
+  margin: auto;
+  width: 210px;
+  height: 210px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.sponsors-card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+.sponsors-card:hover::after {
+  filter: blur(30px);
+}
+.sponsors-card:hover::before {
+  transform: rotate(-90deg);
+}
+
+.sponsors-img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.textBox > .place {
+  font-size: 20px;
+}
+
+.textBox > .sponsorName {
+  font-size: 17px;
+}
+.sponsors-card:hover > .textBox {
+  opacity: 1;
+}
+.sponsors-card:hover > img {
+  width: 170px;
+  height: 170px;
+  filter: blur(10px);
+  animation: anim 2.5s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-7px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(7px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
