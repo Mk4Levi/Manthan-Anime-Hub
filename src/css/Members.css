@@ -1,0 +1,23 @@
+.contact-h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-us-page {
+  background: rgba(0, 0, 0, 0.8);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17.6px);
+  -webkit-backdrop-filter: blur(17.6px);
+  padding-bottom: 5%;
+}
+
+.contactCard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding-top: 3em;
+}
