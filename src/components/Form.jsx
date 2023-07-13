@@ -166,8 +166,7 @@ const Form = () => {
       });
       console.log("FORM SUCCESSFULLY SUBMITTED !!");
       alert("FORM SUCCESSFULLY SUBMITTED !!");
-      // window.location.reload();
-      // getFormData(); //*** */
+      window.location.reload();
     } catch (err) {
       console.error(err);
       alert("Error occurred while submitting the form !!");
@@ -348,7 +347,6 @@ const Form = () => {
             />
           </div>
         </div>
-        <h2>**If more than 4 Anime Recommendations, use comma.</h2>
         <div className="buttonContainer">
           <button className="btn">
             <strong>SUBMIT</strong>

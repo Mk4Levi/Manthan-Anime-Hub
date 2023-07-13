@@ -4,7 +4,7 @@ import { images } from "../database";
 
 const Socials = () => {
   return (
-    <div className="socials-section mk-frame">
+    <div className="socials-section">
       <div className="up">
         <a href="https://github.com/Mk4Levi" target="blank">
           <button className="card1">
