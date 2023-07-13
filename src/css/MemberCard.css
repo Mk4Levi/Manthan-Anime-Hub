@@ -1,0 +1,101 @@
+.contact-cardm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.contact-card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 25px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  color: black;
+  z-index: 3;
+  transition: 0s ease-in-out;
+  bottom: 20px;
+}
+
+.contact-card2 {
+  position: absolute;
+  display: flex;
+  width: 240px;
+  height: 130px;
+  border-radius: 35px;
+  /* background: white; */
+  z-index: 2;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+}
+
+.contact-card:hover {
+  background: black;
+  cursor: pointer;
+}
+
+.contact-card:hover + .contact-card2 {
+  height: 400px;
+}
+
+.contact-card:hover + .contact-card2 .contact-lower {
+  top: 27em;
+}
+
+.contact-upper {
+  /* /* display: flex;
+  flex-direction: row;*/
+  position: relative;
+  left: 2em;
+
+  top: 0.5em;
+}
+
+.contact-lower {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  color: black;
+  left: 1.7em;
+  top: 1em;
+  margin-top: 0.7em;
+  font-size: 0.7em;
+  transition: 0.4s ease-in-out;
+  gap: 0.7em;
+
+  padding-top: 0.6em;
+}
+
+.profile-img {
+  width: 85%;
+  height: 85%;
+  margin: 7.5%;
+  border-radius: 50%;
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.contact {
+  display: flex;
+  gap: 1.5em;
+}
+
+.contact-info {
+  font-size: 1.7em;
+  padding: 0;
+  margin: 0;
+  margin-top: 3px;
+  color: white;
+}
+
+.contact-name {
+  font-size: 1.7em;
+  margin-top: 0.1em;
+  color: white;
+  /* text-align: center; */
+}
