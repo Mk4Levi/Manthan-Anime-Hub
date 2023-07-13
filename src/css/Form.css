@@ -1,0 +1,108 @@
+.containerInput {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0 4px 0;
+  z-index: 1;
+  font-size: 15px;
+  border-radius: 50px;
+  width: 45%;
+}
+
+.containerInput::before {
+  content: "";
+  width: 110%;
+  aspect-ratio: 1;
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  animation: rotate6234 2.5s ease-in-out infinite;
+  z-index: -1;
+  background-image: conic-gradient(
+    from 0deg at 50% 50%,
+    #073aff00 0%,
+    #ff0000ff 25%,
+    #073aff00 25%
+  );
+}
+
+h2 {
+  color: #fff;
+}
+
+.containerInput > input {
+  width: 100%;
+  height: 60px;
+  font-size: inherit;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  background-color: #0a0a0a;
+  outline: 5px solid #0a0a0a;
+}
+
+.containerInput > input:focus {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown) {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown):valid {
+  outline: 4px solid rgb(0, 255, 183);
+  border-radius: 0;
+}
+
+@keyframes rotate6234 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.selectInput {
+  width: 45%;
+  height: 60px;
+  background: black;
+  color: #606060;
+  /* padding-left: 0.05rem; */
+}
+
+select option {
+  width: 100%;
+  height: 55px;
+  background: black;
+  color: #606060;
+  border: 0;
+  font-size: 1rem;
+  border-radius: 30px;
+}
+
+select {
+  width: 100%;
+  height: 56px;
+  background: black;
+  color: #606060;
+  border: 0;
+  padding: 0.3rem 0 0 1rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 760px) {
+  .containerInput {
+    width: 100%;
+  }
+  .selectInput {
+    width: 100%;
+  }
+}
+
+#mySelect.selected {
+  outline: 4px solid rgb(0, 255, 183);
+  border-radius: 0;
+}
