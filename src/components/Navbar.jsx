@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { GiHamburgerMenu } from "react-icons/gi";
 import Hamburger from "hamburger-react";
 import images from "../database/images";
 import "../css/Navbar.css";
@@ -68,11 +67,6 @@ const Navbar = () => {
         </a>
       </div>
       <div className="app__navbar-smallscreen">
-        {/* <GiHamburgerMenu
-          color="#fff"
-          fontSize={27}
-          onClick={() => setToggleMenu(true)}
-        /> */}
         <Hamburger
           toggled={toggleMenu}
           toggle={setToggleMenu}

@@ -73,11 +73,11 @@ const mangaData = [
   },
   {
     id: 3,
-    img: images.sllogo,
+    img: images.aotlogo,
   },
   {
     id: 4,
-    img: images.aotlogo,
+    img: images.sllogo,
   },
   {
     id: 5,
