@@ -1,30 +1,65 @@
-import React from "react";
+import { useState, useRef } from "react";
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { Fade } from "react-awesome-reveal";
 import "../css/Manga.css";
 import { data } from "../database";
-import { MangaCard } from "../components";
 
-const Manga = () => {
+const Gallery = () => {
+  const scrollRef = useRef(null);
+
+  const scrollLeftDir = () => scroll("left");
+  const scrollRightDir = () => scroll("right");
+
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (current && current.scrollLeft != null) {
+      if (direction === "left") {
+        current.scrollLeft -= 800;
+      } else if (direction === "right") {
+        current.scrollLeft += 500;
+      }
+    }
+  };
+
+  const [mangaDataArr] = useState(data.mangaData);
+
   return (
-    <div className="app_gallery" id="manga">
-      <div className="app_gallery-content">
+    <div className="app-gallery" id="manga">
+      <div className="app-gallery-content">
         <Fade bottom>
-          <h1 className="page-title" style={{ color: "blue" }}>
-            Top Mangas to Follow
-          </h1>
+          <h1 className="page-title">Top Mangas to Follow</h1>
         </Fade>
       </div>
-      <div className="app_gallery-images">
-        <div className="app_gallery-images_container">
-          <Fade bottom duration={700} cascade>
-            {data.mangaData.map((image) => (
-              <MangaCard key={image.id} image={image} />
-            ))}
-          </Fade>
+      <div className="app-gallery-images">
+        <div className="app-gallery-images_container" ref={scrollRef}>
+          {mangaDataArr.map((image) => (
+            <div className="app-gallery-images_card">
+              <img
+                key={image.id}
+                className="gallery-image"
+                src={image.img}
+                alt={`img-${image.id}`}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="app-gallery-images_arrows">
+          <div className="gallery-arrows-div">
+            <BsArrowLeftShort
+              className="gallery-arrow-icon"
+              onClick={scrollLeftDir}
+            />
+          </div>
+          <div className="gallery-arrows-div">
+            <BsArrowRightShort
+              className="gallery-arrow-icon"
+              onClick={scrollRightDir}
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Manga;
+export default Gallery;
