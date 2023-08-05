@@ -1,0 +1,25 @@
+/* Toastify css */
+
+.success-toast {
+  background-color: #141e30;
+  color: whitesmoke;
+}
+
+.failure-toast {
+  background-color: #ff4141;
+  color: whitesmoke;
+}
+
+.Toastify__progress-bar {
+  background: #03e9f4;
+}
+
+@media screen and (max-width: 450px) {
+  .success-toast {
+    width: 85%;
+  }
+
+  .failure-toast {
+    width: 85%;
+  }
+}

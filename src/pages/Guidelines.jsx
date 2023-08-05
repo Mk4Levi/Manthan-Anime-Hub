@@ -15,9 +15,6 @@ const Guidelines = () => (
                 it.
               </p>
               <p className="p__opensans" id="guide__p">
-                ⚙️ Your Top-4 Anime Recommendation would be appreciated.
-              </p>
-              <p className="p__opensans" id="guide__p">
                 ⚙️ Make sure to give a feedback about your UI-Experience .
               </p>
               <p className="p__opensans" id="guide__p">
