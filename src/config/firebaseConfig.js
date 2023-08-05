@@ -1,16 +1,14 @@
 import { initializeApp } from "firebase/app";
 
-// My Web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDVMTX5y-iXx7ZEUnKUbyo77-qe2CTTQ9g",
-  authDomain: "mkp-portfolio-db.firebaseapp.com",
-  projectId: "mkp-portfolio-db",
-  storageBucket: "mkp-portfolio-db.appspot.com",
-  messagingSenderId: "761035253598",
-  appId: "1:761035253598:web:f4091589f43fe4c53891cf",
+  apiKey: "AIzaSyDjeKZle6SX0gav4ut76rpz3zDgUDed4PM",
+  authDomain: "mk-db-firebase.firebaseapp.com",
+  projectId: "mk-db-firebase",
+  storageBucket: "mk-db-firebase.appspot.com",
+  messagingSenderId: "148596546409",
+  appId: "1:148596546409:web:5cdf42ccd9924a98337bf8",
 };
 
-// Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
 export default firebaseApp;

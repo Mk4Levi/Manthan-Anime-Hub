@@ -33,9 +33,8 @@ const Gallery = () => {
       <div className="app-gallery-images">
         <div className="app-gallery-images_container" ref={scrollRef}>
           {mangaDataArr.map((image) => (
-            <div className="app-gallery-images_card">
+            <div key={image.id} className="app-gallery-images_card">
               <img
-                key={image.id}
                 className="gallery-image"
                 src={image.img}
                 alt={`img-${image.id}`}
