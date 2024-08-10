@@ -20,7 +20,7 @@ const AboutMe = () => {
                 <div className="inner-circle">
                   <img
                     className="aboutUs-img"
-                    src={images.urek}
+                    src={images.codegeass}
                     width="100%"
                     height="100%"
                     alt="Junoon"
