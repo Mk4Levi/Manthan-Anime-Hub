@@ -114,9 +114,9 @@ h1 {
   position: relative;
   /* height: 200px; */
   /* height: 12.5rem; */
-  height: 14vw;
+  height: 10vw;
   /* width: 100%; */
-  width: 25vw;
+  width: 22vw;
   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
   animation: rotate 1.5s linear infinite;
 }
@@ -147,12 +147,12 @@ h1 {
 .inner-circle {
   height: 180px;
   /* height: 14vw; */
-  width: 80%;
+  width: 95%;
   position: absolute;
   background: black;
   top: 10px;
   left: 10px;
-  margin-left: 7%;
+  /* margin-left: 7%; */
   z-index: 9;
 }
 
